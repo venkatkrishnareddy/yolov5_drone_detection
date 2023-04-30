@@ -26,3 +26,4 @@ Developers reduce 50% of their code when using Roboflow's workflow, automate ann
 
 python ./train.py 
 python yolo_video.py --model="./logs/000/ep084-loss46.152-val_loss54.821.h5" --classes="./maskData/train/_classes.txt"  --image  --anchors="./model_data/tiny_yolo_anchors.txt"
+python yolo_video.py --model=./logs/000/ep183-loss38.457-val_loss42.928.h5 --classes="./maskData/train/_classes.txt"   --anchors="./model_data/tiny_yolo_anchors.txt" --input=./istockphoto.mp4 --output="./outvid.mp4"
