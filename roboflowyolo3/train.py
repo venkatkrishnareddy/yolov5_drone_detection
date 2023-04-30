@@ -34,13 +34,17 @@ def _main():
 
     input_shape = (416,416) # multiple of 32, hw
 
-    pre_weights_path =  sys.argv[1] 
+    if sys.argv[1] == None:
+        preModel = False
+    else:
+        preModel = True
+        pre_weights_path =  sys.argv[1] 
 
     is_tiny_version = len(anchors)==6 # default setting
     if is_tiny_version:
-        model = create_tiny_model(input_shape, anchors, num_classes,  freeze_body=0, weights_path=pre_weights_path)
+        model = create_tiny_model(input_shape, anchors, num_classes, load_pretrained=preModel, freeze_body=0, weights_path=pre_weights_path)
     else:
-        model = create_model(input_shape, anchors, num_classes,  freeze_body=0, weights_path=pre_weights_path) # make sure you know what you freeze
+        model = create_model(input_shape, anchors, num_classes, load_pretrained=preModel, freeze_body=0, weights_path=pre_weights_path) # make sure you know what you freeze
 
     logging = TensorBoard(log_dir=log_dir)
     checkpoint = ModelCheckpoint(log_dir + 'ep{epoch:03d}-loss{loss:.3f}-val_loss{val_loss:.3f}.h5',
