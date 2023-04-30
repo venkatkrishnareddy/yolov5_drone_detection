@@ -14,16 +14,17 @@ from keras.callbacks import TensorBoard, ModelCheckpoint, ReduceLROnPlateau, Ear
 
 from yolo3.model import preprocess_true_boxes, yolo_body, tiny_yolo_body, yolo_loss
 from yolo3.utils import get_random_data
+import sys
 
 
 def _main():
     # './export/_annotations.txt'
-    annotation_path = './maskData/train/_annotations.txt'
+    annotation_path = './dataset/train/_annotations.txt'
     log_dir = 'logs/000/'
     # './export/_annotations.txt'
-    classes_path = './maskData/train/_classes.txt'
-    #anchors_path = './model_data/yolo_anchors.txt'
-    anchors_path = 'model_data/tiny_yolo_anchors.txt'
+    classes_path = './dataset/train/_classes.txt'
+    anchors_path = './model_data/yolo_anchors.txt'
+    #anchors_path = 'model_data/tiny_yolo_anchors.txt'
     class_names = get_classes(classes_path)
     print("-------------------CLASS NAMES-------------------")
     print(class_names)
@@ -33,11 +34,13 @@ def _main():
 
     input_shape = (416,416) # multiple of 32, hw
 
+    pre_weights_path =  sys.argv[1] 
+
     is_tiny_version = len(anchors)==6 # default setting
     if is_tiny_version:
-        model = create_tiny_model(input_shape, anchors, num_classes, load_pretrained= False, freeze_body=2, weights_path='model_data/tiny_yolo_weights.h5')
+        model = create_tiny_model(input_shape, anchors, num_classes,  freeze_body=0, weights_path=pre_weights_path)
     else:
-        model = create_model(input_shape, anchors, num_classes, load_pretrained= False, freeze_body=2, weights_path='model_data/yolo.h5') # make sure you know what you freeze
+        model = create_model(input_shape, anchors, num_classes,  freeze_body=0, weights_path=pre_weights_path) # make sure you know what you freeze
 
     logging = TensorBoard(log_dir=log_dir)
     checkpoint = ModelCheckpoint(log_dir + 'ep{epoch:03d}-loss{loss:.3f}-val_loss{val_loss:.3f}.h5',
@@ -48,9 +51,9 @@ def _main():
     val_split = 0.2
     with open(annotation_path) as f:
         lines = f.readlines()
-    np.random.seed(10101)
-    np.random.shuffle(lines)
-    np.random.seed(None)
+    # np.random.seed(10101)
+    # np.random.shuffle(lines)
+    # np.random.seed(None)
     num_val = int(len(lines)*val_split)
     num_train = len(lines) - num_val
 
@@ -109,8 +112,7 @@ def get_anchors(anchors_path):
     return np.array(anchors).reshape(-1, 2)
 
 
-def create_model(input_shape, anchors, num_classes, load_pretrained=True, freeze_body=2,
-            weights_path='model_data/yolo.h5'):
+def create_model(input_shape, anchors, num_classes, load_pretrained=True, freeze_body=2, weights_path='model_data/yolo.h5'):
     '''create the training model'''
     K.clear_session() # get a new session
     image_input = Input(shape=(None, None, 3))
