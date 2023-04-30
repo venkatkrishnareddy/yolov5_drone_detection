@@ -34,11 +34,13 @@ def _main():
 
     input_shape = (416,416) # multiple of 32, hw
 
-    if sys.argv[1] == None:
-        preModel = False
-    else:
+
+    if len(sys.argv) > 1:
         preModel = True
-        pre_weights_path =  sys.argv[1] 
+        pre_weights_path =  sys.argv[1]         
+    else:
+        preModel = False
+        pre_weights_path = ""
 
     is_tiny_version = len(anchors)==6 # default setting
     if is_tiny_version:
