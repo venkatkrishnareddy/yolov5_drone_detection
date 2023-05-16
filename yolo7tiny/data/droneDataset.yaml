@@ -1,5 +1,5 @@
-train: ../../drone_yolov5/images/train
-val: ../../drone_yolov5/images/val
+train: ../drone_yolov5/images/train
+val: ../drone_yolov5/images/val
 #test: ../pothole_dataset/images/test
  
 # Classes
