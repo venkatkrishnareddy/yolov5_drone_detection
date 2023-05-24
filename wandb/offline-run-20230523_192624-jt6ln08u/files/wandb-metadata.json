@@ -1,0 +1,227 @@
+{
+    "os": "Linux-4.18.0-372.9.1.el8.x86_64-x86_64-with-glibc2.28",
+    "python": "3.11.3",
+    "heartbeatAt": "2023-05-24T00:26:24.733627",
+    "startedAt": "2023-05-24T00:26:24.613008",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--epochs",
+        "100",
+        "--workers",
+        "4",
+        "--device",
+        "0",
+        "--batch-size",
+        "32",
+        "--data",
+        "/home/mmete/yolov5_drone_detection/yolo7tiny/data/droneDataset.yaml",
+        "--img",
+        "640",
+        "640",
+        "--cfg",
+        "/home/mmete/yolov5_drone_detection/yolo7tiny/cfg/training/yolov7-tinyVenkatV2-2.2MB.yaml",
+        "--weights",
+        "/home/mmete/yolov5_drone_detection/yolo7tiny/yolo_tiny_Venkat_May13.pt",
+        "--name",
+        "yolov7tinyMay16",
+        "--hyp",
+        "/home/mmete/yolov5_drone_detection/yolo7tiny/data/hyp.scratch.tiny.yaml"
+    ],
+    "state": "running",
+    "program": "/home/mmete/yolov5_drone_detection/yolo7tiny/train.py",
+    "codePath": "yolo7tiny/train.py",
+    "git": {
+        "remote": "https://github.com/venkatkrishnareddy/yolov5_drone_detection",
+        "commit": "6d3e44530cb7627060375a7a702a30a41380acd0"
+    },
+    "email": "mutlu.mete@tamuc.edu",
+    "root": "/home/mmete/yolov5_drone_detection",
+    "host": "csci01.tamu-commerce.edu",
+    "username": "mmete",
+    "executable": "/home/mmete/miniconda3/envs/drone/bin/python",
+    "cpu_count": 16,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 3040.6245625,
+        "min": 3100.0,
+        "max": 3100.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1199.996,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 3100.0,
+            "max": 3100.0
+        }
+    ],
+    "disk": {
+        "total": 99.951171875,
+        "used": 9.349536895751953
+    },
+    "gpu": "Tesla P100-PCIE-16GB",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "Tesla P100-PCIE-16GB",
+            "memory_total": 17179869184
+        }
+    ],
+    "memory": {
+        "total": 188.5716323852539
+    }
+}
