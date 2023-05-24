@@ -17,10 +17,13 @@ def gsutil_getsize(url=''):
 
 
 def attempt_download(file, repo='WongKinYiu/yolov7'):
+    print(f' Download Weights: {file}...')
     # Attempt file download if does not exist
     file = Path(str(file).strip().replace("'", '').lower())
 
+    print(f' File link to download: {file}')
     if not file.exists():
+        print(f' File exist: {file}', file.exists(), flush= True)
         try:
             response = requests.get(f'https://api.github.com/repos/{repo}/releases/latest').json()  # github api
             assets = [x['name'] for x in response['assets']]  # release assets

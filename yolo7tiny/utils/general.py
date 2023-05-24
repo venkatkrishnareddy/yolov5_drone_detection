@@ -155,6 +155,7 @@ def check_file(file):
 
 def check_dataset(dict):
     # Download dataset if not found locally
+    print("DDDDATA DICT:", dict, flush= True)
     val, s = dict.get('val'), dict.get('download')
     if val and len(val):
         val = [Path(x).resolve() for x in (val if isinstance(val, list) else [val])]  # val path
