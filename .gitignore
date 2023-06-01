@@ -11,3 +11,5 @@ yolo7tiny/runs/
 yolo7tiny/runs/train
 *.cache
 runs/train
+greenVideo/
+

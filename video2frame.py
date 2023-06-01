@@ -2,20 +2,16 @@ import cv2
 import os
 
 # Path to the folder containing the video files
-video_folder = r"C:\Users\krish\Downloads\2023-03-19"
+video_folder = r"./greenVideo/"
 # Define the output folder for the JPEG images
-output_folder = r"C:\Users\krish\Downloads\new_valframe"
+output_folder = r"./greendataset/"
 
 
 # Loop through all the video files in the folder
 for filename in os.listdir(video_folder):
-    if filename.endswith(".mp4") or filename.endswith(".avi"):
+    if filename.endswith(".mp4") or filename.endswith(".avi") or filename.endswith(".MOV"):
         # Path to the video file
         video_path = os.path.join(video_folder, filename)
-        
-        # Create a folder to store the frames
-        #frame_folder = os.path.splitext(video_path)[0] + "_frames"
-        #os.makedirs(frame_folder, exist_ok=True)
         
         # Open the video file
         cap = cv2.VideoCapture(video_path)
@@ -33,7 +29,7 @@ for filename in os.listdir(video_folder):
             #cv2.imwrite(frame_path, frame)
 
             # Save the frame as a JPEG image
-            if frame_count % 140 == 1:
+            if frame_count % 60 == 1:
              cv2.imwrite(f'{output_folder}/f{filename}.frame_{frame_count}.jpg', frame)
             
             # Increment the frame count
