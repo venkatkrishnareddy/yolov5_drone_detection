@@ -6,10 +6,10 @@ roboflowyolo3/logs
 *.weights
 wandb
 yolo7tiny/wandb
-runs
+# runs
 # yolo7tiny/runs/
 # yolo7tiny/runs/train
 *.cache
-runs/train
+# runs/train
 greenVideo/
 
