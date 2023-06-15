@@ -4,7 +4,7 @@ import os
 # Path to the folder containing the video files
 video_folder = r"./greenVideo/"
 # Define the output folder for the JPEG images
-output_folder = r"./greendataset/"
+output_folder = r"./greendatasetv2/"
 
 
 # Loop through all the video files in the folder
@@ -29,7 +29,7 @@ for filename in os.listdir(video_folder):
             #cv2.imwrite(frame_path, frame)
 
             # Save the frame as a JPEG image
-            if frame_count % 60 == 1:
+            if frame_count % 30 == 1 and frame_count % 60 != 1  :
              cv2.imwrite(f'{output_folder}/f{filename}.frame_{frame_count}.jpg', frame)
             
             # Increment the frame count
