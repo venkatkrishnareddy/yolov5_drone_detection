@@ -19,3 +19,14 @@ python /scratch/user/u.mm115921/yolov5_drone_detection/yolo7tiny/train.py --epoc
 python /home/mmete/yolov5_drone_detection/yolo7tiny/train.py --epochs 100 --workers 4 --device 0 --batch-size 32 --data /home/mmete/yolov5_drone_detection/yolo7tiny/data/droneDataset.yaml --img 640 640 --cfg /home/mmete/yolov5_drone_detection/yolo7tiny/cfg/training/yolov7-tinyVenkatV2-2.2MB.yaml --weights /home/mmete/yolov5_drone_detection/yolo_tiny_venkat_may13.pt --name yolov7tinyMay16 --hyp /home/mmete/yolov5_drone_detection/yolo7tiny/data/hyp.scratch.tiny.yaml 
 
 
+------------------
+csci01
+conda activate drone
+cd yolo7tiny
+
+python /home/mmete/yolov5_drone_detection/yolo7tiny/train.py --epochs 100 --workers 4 --device 0 --batch-size 32 --data /home/mmete/yolov5_drone_detection/yolo7tiny/data/droneDataset.yaml --img 640 640 --cfg /home/mmete/yolov5_drone_detection/yolo7tiny/cfg/training/yolov7-tinyVenkatV2-2.2MB.yaml --weights /home/mmete/yolov5_drone_detection/yolo_tiny_venkat_may13.pt --name yolov7tinyMay16 --hyp /home/mmete/yolov5_drone_detection/yolo7tiny/data/hyp.scratch.tiny.yaml 
+
+# Green labeled dataset
+python /home/mmete/yolov5_drone_detection/yolo7tiny/train.py --epochs 1000 --workers 4 --device 0 --batch-size 32 --data /home/mmete/yolov5_drone_detection/yolo7tiny/data/greendroneDataset.yaml --img 640 640 --cfg /home/mmete/yolov5_drone_detection/yolo7tiny/cfg/training/yolov7-tinyVenkatV2-2.2MB.yaml --weights /home/mmete/yolov5_drone_detection/yolo_tiny_venkat_may13.pt --name yolov7_green_jun_6 --hyp /home/mmete/yolov5_drone_detection/yolo7tiny/data/hyp.scratch.tiny.yaml 
+
+--------------------
