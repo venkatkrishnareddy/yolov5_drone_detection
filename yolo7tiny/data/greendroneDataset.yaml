@@ -1,5 +1,5 @@
-train: ../green_dataset/images/train
-val: ../green_dataset/images/val
+train: ../yolo_ready_green_dataset/images/train
+val: ../yolo_read_green_dataset/images/val
 #test: ../pothole_dataset/images/test
  
 # Classes
