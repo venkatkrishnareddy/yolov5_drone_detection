@@ -1,0 +1,7 @@
+train: ../drone_yolov5/images/train
+val: ../drone_yolov5/images/val
+#test: ../pothole_dataset/images/test
+ 
+# Classes
+nc: 1  # number of classes
+names: ['drone']  # class names

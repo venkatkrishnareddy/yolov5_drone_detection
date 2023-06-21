@@ -1,0 +1,7 @@
+train: ../yolo_ready_green_dataset/images/train
+val: ../yolo_ready_green_dataset/images/val
+#test: ../pothole_dataset/images/test
+ 
+# Classes
+nc: 1  # number of classes
+names: ['drone']  # class names
